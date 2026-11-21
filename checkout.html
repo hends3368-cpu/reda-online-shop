@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Reda online shop</title>
+
+    <link rel="icon" href="img/icon.png">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!--cart-->
+    <div class="cart side_box">
+        <div class="top_side_box">
+            <h3>my cart <span class="count_item_cart">(0 item in cart)</span></h3>
+            <span class="close_side_box"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart items_side_box">
+            <!--items from js-->
+        </div>
+
+        <div class="bottom_side_box">
+            <div class="total">
+                <p>cart total</p>
+                <p class="price_cart_total">$0</p>
+            </div>
+            <div class="btns_side_box">
+                <a href="checkout.html" class="btn">proceed to checkout</a>
+                <a href="#" class="btn trans_bg close_side_box">shop more</a>
+            </div>
+        </div>
+    </div>
+
+    <!--favourite-->
+    <div class="favourite side_box">
+        <div class="top_side_box">
+            <h3>my favourite <span class="count_item_fav">(0 item)</span></h3>
+            <span class="close_side_box"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
+        <div class="items_in_fav items_side_box">
+            <!--items from js-->
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <header>
+
+<div class="top_header">
+    <div class="container">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Reda online shop"></a>
+        <form action="" class="search_box">
+         <div class="select_box">
+             <select id="category" name="category">
+              <option value="all">All Categories</option>
+              <option value="electronics">Electronics & Digital</option>
+              <option value="mobiles">Phones & Tablets</option>
+              <option value="appliances">Home Appliances</option>
+             </select>
+         </div>
+         <input type="text" name="search" id="search" placeholder="search for products" required>
+         <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+         </button>
+        </form>
+         <div class="header_icons">
+            <div class="icon open_fav">
+                <i class="fa-regular fa-heart"></i>
+                <span class="count count_favourite">0</span>
+            </div>
+            <div class="icon open_cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="count count_item_header">0</span>
+            </div>
+         </div>
+    </div>
+
+</div>
+
+<div class="bottom_header">
+    <div class="container">
+        <nav class="nav">
+            <span class="open_menu"><i class="fa-solid fa-bars"></i></span>
+
+            <div class="category_nav">
+
+                <div class="categre_btn">
+                    <i class="fa-solid fa-bars"></i>
+                    <p>Browse Category</p>
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </div>
+                <div class="category_nav_list">
+                    <a href="index.html#hot_deals">Top Offers</a>
+                    <a href="index.html#electronics">Electronics & Digital</a>
+                    <a href="index.html#mobiles">Phones & Tablets</a>
+                    <a href="index.html#appliances">Home Appliances</a>
+                </div>
+            </div>
+            <ul class="nav_links">
+                <span class="close_menu"><i class="fa-solid fa-xmark"></i></span>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="index.html#hot_deals">Offers</a></li>
+                <li><a href="index.html#electronics">Electronics</a></li>
+                <li><a href="index.html#appliances">Accessories</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="login_signup btns">
+            <a href="#" class="btn">login <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+            <a href="#" class="btn">sign up <i class="fa-solid fa-user-plus"></i></a>
+        </div>
+    </div>
+</div>
+
+    </header>
+
+
+    <!--checkout-->
+    <section class="checkout">
+        <div class="container">
+
+            <div class="ordersummary">
+                <h1>order summary</h1>
+
+                <div class="items">
+                    <!--items from js-->
+                </div>
+
+                <div class="bottom_summary">
+                    <div class="shop_table">
+                        <p>subtotal:</p>
+                        <span class="subtotal_checkout">$0</span>
+                    </div>
+                    <div class="shop_table">
+                        <p>shipping:</p>
+                        <span class="shipping_checkout">$0</span>
+                    </div>
+                    <div class="shop_table">
+                        <p>total:</p>
+                        <span class="total_checkout">$0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input_info">
+                <h2>billing details</h2>
+                <form id="form_contact" name="submit-to-google-sheet">
+                    <!--hidden inputs filled from js-->
+                    <input type="hidden" name="Items" id="items">
+                    <input type="hidden" name="Count" id="count_items">
+                    <input type="hidden" name="Total" id="total_price">
+
+                    <div class="inputs">
+                        <div class="input">
+                            <label for="name">full name</label>
+                            <input type="text" name="Name" id="name" placeholder="enter your name" required>
+                        </div>
+                        <div class="input">
+                            <label for="email">email</label>
+                            <input type="email" name="Email" id="email" placeholder="enter your email" required>
+                        </div>
+                        <div class="input">
+                            <label for="phone">phone</label>
+                            <input type="tel" name="Phone" id="phone" placeholder="01xxxxxxxxx" pattern="[0-9+ ]{8,15}" required>
+                        </div>
+                        <div class="input">
+                            <label for="city">city</label>
+                            <input type="text" name="City" id="city" placeholder="enter your city" required>
+                        </div>
+                        <div class="input full_input">
+                            <label for="address">address</label>
+                            <input type="text" name="Address" id="address" placeholder="street, building, floor" required>
+                        </div>
+                    </div>
+
+                    <div class="payment_way">
+                        <h3>payment method</h3>
+                        <label><input type="radio" name="Payment" value="Cash on delivery" checked> cash on delivery</label>
+                        <label><input type="radio" name="Payment" value="Credit card"> credit card</label>
+                        <img src="img/payment_method.png" alt="payment methods">
+                    </div>
+
+                    <button type="submit" class="btn btn_order">place order <i class="fa-solid fa-check"></i></button>
+                    <p class="form_msg"></p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--order done popup-->
+    <div class="order_done">
+        <div class="box">
+            <img src="img/checked.png" alt="">
+            <h2>order placed successfully</h2>
+            <p>thank you for shopping with us, we will contact you soon to confirm your order.</p>
+            <a href="index.html" class="btn">continue shopping</a>
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <footer id="footer">
+        <div class="container">
+            <div class="big_row">
+                <img src="img/white_logo.png" alt="Reda online shop" class="logo_footer">
+                <p>Reda online shop is your place for the best electronics, mobiles and home appliances with the best prices and fast delivery.</p>
+                <div class="icons_footer">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>categories</h4>
+                <div class="links">
+                    <a href="index.html#hot_deals"><i class="fa-solid fa-caret-right"></i> top offers</a>
+                    <a href="index.html#electronics"><i class="fa-solid fa-caret-right"></i> electronics & digital</a>
+                    <a href="index.html#mobiles"><i class="fa-solid fa-caret-right"></i> phones & tablets</a>
+                    <a href="index.html#appliances"><i class="fa-solid fa-caret-right"></i> home appliances</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>pages</h4>
+                <div class="links">
+                    <a href="index.html"><i class="fa-solid fa-caret-right"></i> home</a>
+                    <a href="shop.html"><i class="fa-solid fa-caret-right"></i> shop</a>
+                    <a href="checkout.html"><i class="fa-solid fa-caret-right"></i> checkout</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> login</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> sign up</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>contact us</h4>
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</a>
+                    <a href="#"><i class="fa-solid fa-phone"></i> +20 100 000 0000</a>
+                    <a href="mailto:info@redashop.com"><i class="fa-solid fa-envelope"></i> info@redashop.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span class="year"></span> <span>Reda online shop</span>. All Rights Reserved.</p>
+                <div class="payment_img">
+                    <img src="img/payment_method.png" alt="payment methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--file js-->
+    <script src="main.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

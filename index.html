@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reda online shop</title>
+
+    <link rel="icon" href="img/icon.png">
+
+    <!--swiper css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!--cart-->
+    <div class="cart side_box">
+        <div class="top_side_box">
+            <h3>my cart <span class="count_item_cart">(0 item in cart)</span></h3>
+            <span class="close_side_box"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart items_side_box">
+            <!--items from js-->
+        </div>
+
+        <div class="bottom_side_box">
+            <div class="total">
+                <p>cart total</p>
+                <p class="price_cart_total">$0</p>
+            </div>
+            <div class="btns_side_box">
+                <a href="checkout.html" class="btn">proceed to checkout</a>
+                <a href="#" class="btn trans_bg close_side_box">shop more</a>
+            </div>
+        </div>
+    </div>
+
+    <!--favourite-->
+    <div class="favourite side_box">
+        <div class="top_side_box">
+            <h3>my favourite <span class="count_item_fav">(0 item)</span></h3>
+            <span class="close_side_box"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
+        <div class="items_in_fav items_side_box">
+            <!--items from js-->
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <header>
+
+<div class="top_header">
+    <div class="container">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Reda online shop"></a>
+        <form action="" class="search_box">
+         <div class="select_box">
+             <select id="category" name="category">
+              <option value="all">All Categories</option>
+              <option value="electronics">Electronics & Digital</option>
+              <option value="mobiles">Phones & Tablets</option>
+              <option value="appliances">Home Appliances</option>
+             </select>
+         </div>
+         <input type="text" name="search" id="search" placeholder="search for products" required>
+         <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+         </button>
+        </form>
+         <div class="header_icons">
+            <div class="icon open_fav">
+                <i class="fa-regular fa-heart"></i>
+                <span class="count count_favourite">0</span>
+            </div>
+            <div class="icon open_cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="count count_item_header">0</span>
+            </div>
+         </div>
+    </div>
+
+</div>
+
+<div class="bottom_header">
+    <div class="container">
+        <nav class="nav">
+            <span class="open_menu"><i class="fa-solid fa-bars"></i></span>
+
+            <div class="category_nav">
+
+                <div class="categre_btn">
+                    <i class="fa-solid fa-bars"></i>
+                    <p>Browse Category</p>
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </div>
+                <div class="category_nav_list">
+                    <a href="#hot_deals">Top Offers</a>
+                    <a href="#electronics">Electronics & Digital</a>
+                    <a href="#mobiles">Phones & Tablets</a>
+                    <a href="#appliances">Home Appliances</a>
+                </div>
+            </div>
+            <ul class="nav_links">
+                <span class="close_menu"><i class="fa-solid fa-xmark"></i></span>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#hot_deals">Offers</a></li>
+                <li><a href="#electronics">Electronics</a></li>
+                <li><a href="#appliances">Accessories</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="login_signup btns">
+            <a href="#" class="btn">login <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+            <a href="#" class="btn">sign up <i class="fa-solid fa-user-plus"></i></a>
+        </div>
+    </div>
+</div>
+
+    </header>
+
+
+    <!--slider-->
+    <div class="slider">
+        <div class="container">
+            <!--swiper js-->
+            <div class="slide-swp mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#hot_deals"><img src="img/banner_home1.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#hot_deals"><img src="img/banner_home2.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="banner_2">
+                <a href="#electronics"><img src="img/banner_home3.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--search result-->
+    <section class="search_result">
+        <div class="container">
+            <div class="top_slide">
+                <h2>search result <span class="search_word"></span></h2>
+                <span class="close_search">clear search <i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <div class="products_grid search_items">
+                <!--items from js-->
+            </div>
+        </div>
+    </section>
+
+
+    <!--banner 3 boxes-->
+    <section class="banners_3">
+        <div class="container">
+            <a href="#electronics" class="box">
+                <div class="text">
+                    <h5>Laptops</h5>
+                    <p>up to 30% off</p>
+                    <span>shop now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <img src="img/banner3_1.png" alt="">
+            </a>
+            <a href="#mobiles" class="box">
+                <div class="text">
+                    <h5>Tablets</h5>
+                    <p>new arrivals</p>
+                    <span>shop now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <img src="img/banner3_2.png" alt="">
+            </a>
+            <a href="#mobiles" class="box">
+                <div class="text">
+                    <h5>Headphones</h5>
+                    <p>best sellers</p>
+                    <span>shop now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <img src="img/banner3_3.png" alt="">
+            </a>
+            <a href="#electronics" class="box">
+                <div class="text">
+                    <h5>Smart TV</h5>
+                    <p>from $280</p>
+                    <span>shop now <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <img src="img/banner3_4.png" alt="">
+            </a>
+        </div>
+    </section>
+
+
+    <!--hot deals-->
+    <section class="slide_product" id="hot_deals">
+        <div class="container">
+            <div class="top_slide">
+                <h2><i class="fa-solid fa-tags"></i> hot deals</h2>
+            </div>
+            <div class="slide_products slide-swp_product">
+                <div class="swiper-wrapper" id="swiper_items_sale">
+                    <!--items from js-->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--banners-->
+    <section class="banners">
+        <div class="container">
+            <div class="banner_3_img">
+                <a href="#mobiles" class="banner_box"><img src="img/banner_box1.jpg" alt=""></a>
+                <a href="#electronics" class="banner_box"><img src="img/banner_box2.jpg" alt=""></a>
+                <a href="#appliances" class="banner_box"><img src="img/banner_box3.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--electronics-->
+    <section class="slide_product" id="electronics">
+        <div class="container">
+            <div class="top_slide">
+                <h2><i class="fa-solid fa-laptop"></i> electronics & digital</h2>
+            </div>
+            <div class="slide_products slide-swp_product">
+                <div class="swiper-wrapper" id="swiper_electronics">
+                    <!--items from js-->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--banners 2-->
+    <section class="banners">
+        <div class="container">
+            <div class="banner_2_img">
+                <a href="#appliances" class="banner_box"><img src="img/banner_box4.jpg" alt=""></a>
+                <a href="#electronics" class="banner_box"><img src="img/banner_box5.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--mobiles-->
+    <section class="slide_product" id="mobiles">
+        <div class="container">
+            <div class="top_slide">
+                <h2><i class="fa-solid fa-mobile-screen-button"></i> phones & tablets</h2>
+            </div>
+            <div class="slide_products slide-swp_product">
+                <div class="swiper-wrapper" id="swiper_mobiles">
+                    <!--items from js-->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--appliances-->
+    <section class="slide_product" id="appliances">
+        <div class="container">
+            <div class="top_slide">
+                <h2><i class="fa-solid fa-blender"></i> home appliances</h2>
+            </div>
+            <div class="slide_products slide-swp_product">
+                <div class="swiper-wrapper" id="swiper_appliances">
+                    <!--items from js-->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--footer-->
+    <footer id="footer">
+        <div class="container">
+            <div class="big_row">
+                <img src="img/white_logo.png" alt="Reda online shop" class="logo_footer">
+                <p>Reda online shop is your place for the best electronics, mobiles and home appliances with the best prices and fast delivery.</p>
+                <div class="icons_footer">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>categories</h4>
+                <div class="links">
+                    <a href="#hot_deals"><i class="fa-solid fa-caret-right"></i> top offers</a>
+                    <a href="#electronics"><i class="fa-solid fa-caret-right"></i> electronics & digital</a>
+                    <a href="#mobiles"><i class="fa-solid fa-caret-right"></i> phones & tablets</a>
+                    <a href="#appliances"><i class="fa-solid fa-caret-right"></i> home appliances</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>pages</h4>
+                <div class="links">
+                    <a href="index.html"><i class="fa-solid fa-caret-right"></i> home</a>
+                    <a href="shop.html"><i class="fa-solid fa-caret-right"></i> shop</a>
+                    <a href="checkout.html"><i class="fa-solid fa-caret-right"></i> checkout</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> login</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> sign up</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>contact us</h4>
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</a>
+                    <a href="#"><i class="fa-solid fa-phone"></i> +20 100 000 0000</a>
+                    <a href="mailto:info@redashop.com"><i class="fa-solid fa-envelope"></i> info@redashop.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span class="year"></span> <span>Reda online shop</span>. All Rights Reserved.</p>
+                <div class="payment_img">
+                    <img src="img/payment_method.png" alt="payment methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--file js-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
